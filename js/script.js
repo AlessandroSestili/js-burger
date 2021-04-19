@@ -60,8 +60,40 @@ submitButton.addEventListener("click", function () {
 
             document.getElementById("price").innerHTML = somma
         }
+
+        // Dichiaro un Array con tutti codici sconto validi
+        var codiciSconto = ["12354ABCDEF", "1BFL54ABCDEF", "12354ABNGSF", "12354AOOOEF", "73054ABDEF", "12354DHJ7EF", "123BGG66F"]
+
+        //Dichiaro variabile che contiene il contenuto del "coupon container"
+        var codiceCoupon = document.getElementById("coupon").value;
+
+        var couponExist = false;
+        for (var i = 0; codiciSconto.length < 0; i++) {
+
+            if (codiciSconto[i] === codiceCoupon) {
+                couponExist = true;
+                somma = somma - (somma * 0.10);
+            } else {
+                alert("Non hai inserito codici sconto")
+            }
+        }
     }
 
+})
 
+// var mailUtente = prompt("Digita la tua mail")
+// var mailValide = ["sestilialessandro@gmail.com" , "asestilz@gmail5.com" , "cocomeri@gmail.com" , "cani_volanti@gmail.com" , "sanguisughe-spruzzanti_inchiostro@yahoo.it"]
 
-}) 
+// var mailExists = false
+
+// for (var i = 0; i < mailValide.length; i++) {
+
+//     if(mailValide[i] === mailUtente) {
+//         mailExists = true
+//         alert("La tua Mail è corretta. ")
+//     }
+// }
+
+// if(!mailExists) {
+//     alert("Inserisci una mail valida.")
+// }
