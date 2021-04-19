@@ -65,17 +65,23 @@ submitButton.addEventListener("click", function () {
         var codiciSconto = ["12354ABCDEF", "1BFL54ABCDEF", "12354ABNGSF", "12354AOOOEF", "73054ABDEF", "12354DHJ7EF", "123BGG66F"]
 
         //Dichiaro variabile che contiene il contenuto del "coupon container"
-        var codiceCoupon = document.getElementById("coupon").value;
+        var codiceCoupon = (document.getElementById("coupon").value);
+        console.log(codiceCoupon);
 
         var couponExist = false;
-        for (var i = 0; codiciSconto.length < 0; i++) {
+
+        for (var i = 0; i < codiciSconto.length; i++) {
 
             if (codiciSconto[i] === codiceCoupon) {
+
                 couponExist = true;
-                somma = somma - (somma * 0.10);
-            } else {
-                alert("Non hai inserito codici sconto")
+                document.getElementById("price").innerHTML = somma - (somma * 0.50);
+
             }
+        }
+
+        if (!couponExist) {
+            console.log("inserisci un codice sconto valido");
         }
     }
 
