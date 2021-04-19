@@ -5,21 +5,21 @@ var submitButton = document.getElementById("button");
 // "calculate" il programma farà la somma degli ingredienti e mi darà il risultato
 submitButton.addEventListener("click", function () {
 
-    // Dichiaro le variabili per selezionare tutti gli ingredienti 
-    var cheeseField = document.getElementById("cheese-add");
-    var tomatoField = document.getElementById("tomato-add");
-    var eggField = document.getElementById("egg-add");
-    var lettuceField = document.getElementById("lettuce-add");
-    var mustardField = document.getElementById("mustard-add");
-    var ketchupField = document.getElementById("ketchup-add");
+    // Dichiaro condizione nella quale l'uente deve inserire per forza il nome dell hamburger
+    var nomeBurger = document.getElementById("name").value;
 
-    // Dichiaro la condizione si deve inserire il Nome del Burger obbligatoriamente 
-    var nomeBurger = document.getElementById("name").toString;
-
-    if (!isNaN(nomeBurger)) {
-
+    if (!nomeBurger) {
         alert("Inserisci prima il nome del tuo hamburger! 🍔")
     } else {
+        // Dichiaro le variabili per selezionare tutti gli ingredienti 
+        var cheeseField = document.getElementById("cheese-add");
+        var tomatoField = document.getElementById("tomato-add");
+        var eggField = document.getElementById("egg-add");
+        var lettuceField = document.getElementById("lettuce-add");
+        var mustardField = document.getElementById("mustard-add");
+        var ketchupField = document.getElementById("ketchup-add");
+
+        // Dichiaro la condizione si deve inserire il Nome dell
 
         //Dichiaro la variabile "somma" 
         var somma = 50;
